@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import HeroSection from './components/HeroSection';
+import ProblemSection from './components/ProblemSection';
+import SolutionSection from './components/SolutionSection';
+import CompetitiveAdvantage from './components/CompetitiveAdvantage';
+import CompetitionSection from './components/CompetitionSection';
+import MarketSection from './components/MarketSection';
+import StrategySection from './components/StrategySection';
+import TokenomicsSection from './components/TokenomicsSection';
+import RoadmapSection from './components/RoadmapSection';
+import CTASection from './components/CTASection';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-dark-bg text-white font-sans">
+      <Navigation />
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <CompetitiveAdvantage />
+      <CompetitionSection />
+      <MarketSection />
+      <StrategySection />
+      <TokenomicsSection />
+      <RoadmapSection />
+      <CTASection />
     </div>
   );
 }
