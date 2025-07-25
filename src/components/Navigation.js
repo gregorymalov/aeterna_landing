@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,7 @@ const Navigation = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false); // Закрываем мобильное меню
     }
   };
 
@@ -57,6 +59,60 @@ const Navigation = () => {
             <button 
               onClick={() => scrollToSection('investors')}
               className="bg-purple-primary hover:bg-purple-dark px-6 py-2 rounded-lg transition-colors font-medium"
+            >
+              Для инвесторов
+            </button>
+          </div>
+          
+          {/* Гамбургер кнопка для мобильных */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
+          >
+            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+            }`}></span>
+            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              isMobileMenuOpen ? 'opacity-0' : ''
+            }`}></span>
+            <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+              isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+            }`}></span>
+          </button>
+        </div>
+        
+        {/* Мобильное меню */}
+        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="py-4 space-y-4 border-t border-purple-primary/20 mt-4">
+            <button 
+              onClick={() => scrollToSection('problem')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Проблема
+            </button>
+            <button 
+              onClick={() => scrollToSection('solution')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Решение
+            </button>
+            <button 
+              onClick={() => scrollToSection('investors')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Рынок
+            </button>
+            <button 
+              onClick={() => scrollToSection('roadmap')}
+              className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
+            >
+              Дорожная карта
+            </button>
+            <button 
+              onClick={() => scrollToSection('investors')}
+              className="block w-full bg-purple-primary hover:bg-purple-dark px-6 py-3 rounded-lg transition-colors font-medium text-center mt-4"
             >
               Для инвесторов
             </button>
