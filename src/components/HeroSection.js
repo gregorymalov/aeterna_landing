@@ -13,8 +13,8 @@ const HeroSection = () => {
       {/* Фоновый GIF */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-animation.gif"
-          alt="Background animation"
+          src="/hero-animatin.gif"
+          alt=""
           className="w-full h-full object-cover opacity-70"
           loading="eager"
         />
