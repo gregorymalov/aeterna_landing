@@ -5,39 +5,39 @@ const CompetitionSection = () => {
 
   const competitors = [
     {
-      name: 'Aeterna',
+      name: 'Raritygram',
       aiGeneration: '✅',
       ipManagement: '✅ (Мастер-NFT)',
       monetization: '✅ (Маркетплейс)',
-      isAeterna: true
+      isRaritygram: true
     },
     {
       name: 'Midjourney, HeyGen',
       aiGeneration: '✅',
       ipManagement: '❌',
       monetization: '❌',
-      isAeterna: false
+      isRaritygram: false
     },
     {
       name: 'CelebMakerAI, Genies',
       aiGeneration: '✅',
       ipManagement: '⚠️ (Централизованно)',
       monetization: '⚠️ (Ограниченно)',
-      isAeterna: false
+      isRaritygram: false
     },
     {
       name: 'Fanvue, Patreon',
       aiGeneration: '⚠️ (Интеграция)',
       ipManagement: '❌',
       monetization: '✅',
-      isAeterna: false
+      isRaritygram: false
     },
     {
       name: 'Lens Protocol, Farcaster',
       aiGeneration: '❌',
       ipManagement: '✅ (Протокол)',
       monetization: '❌',
-      isAeterna: false
+      isRaritygram: false
     }
   ];
 
@@ -96,7 +96,7 @@ const CompetitionSection = () => {
                 <div
                   key={index}
                   className={`grid grid-cols-4 gap-4 p-4 rounded-xl border transition-all duration-300 cursor-pointer ${
-                    competitor.isAeterna
+                    competitor.isRaritygram
                       ? 'bg-gradient-to-r from-purple-primary/20 to-yellow-accent/20 border-purple-primary/50 shadow-lg'
                       : hoveredRow === index
                       ? 'bg-dark-card border-gray-600'
@@ -108,10 +108,10 @@ const CompetitionSection = () => {
                   {/* Название платформы */}
                   <div className="flex items-center">
                     <div className={`font-semibold ${
-                      competitor.isAeterna ? 'text-white text-lg' : 'text-gray-300'
+                      competitor.isRaritygram ? 'text-white text-lg' : 'text-gray-300'
                     }`}>
                       {competitor.name}
-                      {competitor.isAeterna && (
+                      {competitor.isRaritygram && (
                         <div className="text-sm text-purple-primary font-normal mt-1">
                           (Наше решение)
                         </div>
@@ -124,7 +124,7 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.aiGeneration)
                     } ${
-                      hoveredRow === index && !competitor.isAeterna && competitor.aiGeneration.includes('✅')
+                      hoveredRow === index && !competitor.isRaritygram && competitor.aiGeneration.includes('✅')
                         ? 'scale-105 shadow-lg'
                         : ''
                     }`}>
@@ -139,7 +139,7 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.ipManagement)
                     } ${
-                      hoveredRow === index && !competitor.isAeterna && competitor.ipManagement.includes('✅')
+                      hoveredRow === index && !competitor.isRaritygram && competitor.ipManagement.includes('✅')
                         ? 'scale-105 shadow-lg'
                         : ''
                     }`}>
@@ -154,7 +154,7 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.monetization)
                     } ${
-                      hoveredRow === index && !competitor.isAeterna && competitor.monetization.includes('✅')
+                      hoveredRow === index && !competitor.isRaritygram && competitor.monetization.includes('✅')
                         ? 'scale-105 shadow-lg'
                         : ''
                     }`}>
@@ -174,7 +174,7 @@ const CompetitionSection = () => {
               <div
                 key={index}
                 className={`p-6 rounded-xl border transition-all duration-300 ${
-                  competitor.isAeterna
+                  competitor.isRaritygram
                     ? 'bg-gradient-to-r from-purple-primary/20 to-yellow-accent/20 border-purple-primary/50 shadow-lg'
                     : 'bg-dark-card/50 border-gray-700'
                 }`}
@@ -182,11 +182,11 @@ const CompetitionSection = () => {
                 {/* Название платформы */}
                 <div className="mb-4 text-center">
                   <h3 className={`text-xl font-bold ${
-                    competitor.isAeterna ? 'text-white' : 'text-gray-300'
+                    competitor.isRaritygram ? 'text-white' : 'text-gray-300'
                   }`}>
                     {competitor.name}
                   </h3>
-                  {competitor.isAeterna && (
+                  {competitor.isRaritygram && (
                     <div className="text-sm text-purple-primary font-medium mt-1">
                       (Наше решение)
                     </div>
@@ -240,7 +240,7 @@ const CompetitionSection = () => {
         <div className="mt-12 text-center">
           <div className="bg-dark-card rounded-2xl p-8 border border-purple-primary/30">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Только Aeterna предлагает полное решение
+              Только Raritygram предлагает полное решение
             </h3>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Пока конкуренты решают отдельные задачи, мы создаем интегрированную экосистему 

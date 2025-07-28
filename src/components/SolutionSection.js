@@ -65,7 +65,7 @@ const SolutionSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-white">Интегрированная Платформа</span>{' '}
-            <span className="text-purple-primary">Aeterna</span>
+            <span className="text-purple-primary">Raritygram</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ваша цифровая операционная система для создания, защиты и монетизации вашей личности в эпоху ИИ

@@ -79,7 +79,7 @@ const CTASection = () => {
                   </h3>
                   
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    Станьте одним из первых авторов на платформе Aeterna. Получите:
+                    Станьте одним из первых авторов на платформе Raritygram. Получите:
                   </p>
 
                   <div className="space-y-3 mb-6">
@@ -294,10 +294,10 @@ const CTASection = () => {
         {/* Футер */}
         <div className="mt-20 pt-8 border-t border-gray-700 text-center">
           <div className="text-2xl font-bold text-white mb-4">
-            <span className="text-purple-primary">Aeterna</span>
+            <span className="text-purple-primary">Raritygram</span>
           </div>
           <p className="text-gray-400">
-            © 2024 Aeterna. Суверенная цифровая идентичность для эпохи ИИ.
+            © 2024 Raritygram. Суверенная цифровая идентичность для эпохи ИИ.
           </p>
         </div>
       </div>

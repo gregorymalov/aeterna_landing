@@ -83,7 +83,7 @@ const MarketSection = () => {
             <span className="text-yellow-accent">триллион долларов</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Aeterna находится в точке слияния трех мегатрендов, формируя новый совокупный рынок
+            Raritygram находится в точке слияния трех мегатрендов, формируя новый совокупный рынок
           </p>
         </div>
 
@@ -159,7 +159,7 @@ const MarketSection = () => {
               Совокупный рынок: <span className="text-yellow-accent">$1.5+ триллиона</span>
             </h3>
             <p className="text-xl text-gray-300">
-              Aeterna создает новую рыночную категорию на пересечении этих мегатрендов, 
+              Raritygram создает новую рыночную категорию на пересечении этих мегатрендов, 
               становясь критической инфраструктурой для цифровой экономики будущего.
             </p>
           </div>

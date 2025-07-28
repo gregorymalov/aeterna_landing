@@ -60,7 +60,7 @@ const CompetitiveAdvantage = () => {
                 <p className="text-gray-300 text-lg leading-relaxed">
                   Наша архитектура <span className="text-yellow-accent font-semibold">'согласие прежде всего'</span> 
                   (KYC + Мастер-NFT) создает неопровержимый аудиторский след. 
-                  Aeterna — это не просто инструмент, это <span className="text-purple-primary font-semibold">'безопасная гавань'</span> для авторов и партнеров.
+                  Raritygram — это не просто инструмент, это <span className="text-purple-primary font-semibold">'безопасная гавань'</span> для авторов и партнеров.
                 </p>
               </div>
 
@@ -103,12 +103,12 @@ const CompetitiveAdvantage = () => {
                       </svg>
                     </div>
 
-                    {/* Защищенный контент Aeterna */}
+                    {/* Защищенный контент Raritygram */}
                     <div className="relative">
                       <div className="bg-gradient-to-r from-purple-primary/20 to-yellow-accent/20 border border-purple-primary/40 rounded-lg p-4">
                         <div className="flex items-center justify-between">
                           <div className="flex-1">
-                            <div className="text-white font-semibold">Контент Aeterna</div>
+                            <div className="text-white font-semibold">Контент Raritygram</div>
                             <div className="text-green-400 text-sm">✅ KYC + Мастер-NFT</div>
                           </div>
                           <div className="text-green-500 text-2xl">🛡️</div>

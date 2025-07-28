@@ -22,7 +22,7 @@ const StrategySection = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-primary to-blue-600 rounded-xl mb-4">
                   <span className="text-2xl font-bold text-white">I</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Фаза I: Aeterna</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Фаза I: Raritygram</h3>
                 <div className="text-purple-primary font-semibold">(SFW - Safe for Work)</div>
               </div>
 
