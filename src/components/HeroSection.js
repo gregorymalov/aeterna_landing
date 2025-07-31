@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Background GIF for Mobile */}
       <div className="absolute inset-0 z-0 md:hidden">
         <img
-          src="/IMG_1766.gif"
+          src="/IMG_9799.gif"
           alt=""
           className="w-full h-full object-contain opacity-70"
           loading="eager"
