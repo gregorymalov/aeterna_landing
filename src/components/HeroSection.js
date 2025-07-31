@@ -28,7 +28,7 @@ const HeroSection = () => {
         <img
           src="/IMG_1766.gif"
           alt=""
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-contain opacity-70"
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/30 via-dark-bg/20 to-dark-bg/60"></div>

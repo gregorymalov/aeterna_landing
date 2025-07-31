@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { X, Ban, CheckCircle, Shield } from 'lucide-react';
 
 const CompetitiveAdvantage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -91,9 +92,11 @@ const CompetitiveAdvantage = () => {
                     <div className="flex items-center justify-between mb-6">
                       <div className="bg-gray-600 rounded-lg p-3 flex-1 mr-4">
                         <div className="text-gray-300 text-sm">Regular AI content</div>
-                        <div className="text-red-400 text-xs">❌ No verification</div>
+                        <div className="text-red-400 text-xs flex items-center gap-1">
+                          <X className="w-3 h-3" /> No verification
+                        </div>
                       </div>
-                      <div className="text-red-500 text-2xl">🚫</div>
+                      <Ban className="w-8 h-8 text-red-500" />
                     </div>
 
                     {/* Down arrow */}
@@ -109,9 +112,11 @@ const CompetitiveAdvantage = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex-1">
                             <div className="text-white font-semibold">Raritygram Content</div>
-                            <div className="text-green-400 text-sm">✅ KYC + Master-NFT</div>
+                            <div className="text-green-400 text-sm flex items-center gap-1">
+                              <CheckCircle className="w-4 h-4" /> KYC + Master-NFT
+                            </div>
                           </div>
-                          <div className="text-green-500 text-2xl">🛡️</div>
+                          <Shield className="w-8 h-8 text-green-500" />
                         </div>
                       </div>
                       

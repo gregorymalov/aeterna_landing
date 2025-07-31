@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { CheckCircle, X, AlertTriangle } from 'lucide-react';
+import TestStatus from './TestStatus';
 
 const CompetitionSection = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
@@ -6,54 +8,81 @@ const CompetitionSection = () => {
   const competitors = [
     {
       name: 'Raritygram',
-      aiGeneration: '✅',
-      ipManagement: '✅ (Master-NFT)',
-      monetization: '✅ (Marketplace)',
+      aiGeneration: 'yes',
+      ipManagement: 'yes (Master-NFT)',
+      monetization: 'yes (Marketplace)',
       isRaritygram: true
     },
     {
       name: 'Midjourney, HeyGen',
-      aiGeneration: '✅',
-      ipManagement: '❌',
-      monetization: '❌',
+      aiGeneration: 'yes',
+      ipManagement: 'no',
+      monetization: 'no',
       isRaritygram: false
     },
     {
       name: 'CelebMakerAI, Genies',
-      aiGeneration: '✅',
-      ipManagement: '⚠️ (Centralized)',
-      monetization: '⚠️ (Limited)',
+      aiGeneration: 'yes',
+      ipManagement: 'warning (Centralized)',
+      monetization: 'warning (Limited)',
       isRaritygram: false
     },
     {
       name: 'Fanvue, Patreon',
-      aiGeneration: '⚠️ (Integration)',
-      ipManagement: '❌',
-      monetization: '✅',
+      aiGeneration: 'warning (Integration)',
+      ipManagement: 'no',
+      monetization: 'yes',
       isRaritygram: false
     },
     {
       name: 'Lens Protocol, Farcaster',
-      aiGeneration: '❌',
-      ipManagement: '✅ (Protocol)',
-      monetization: '❌',
+      aiGeneration: 'no',
+      ipManagement: 'yes (Protocol)',
+      monetization: 'no',
       isRaritygram: false
     }
   ];
 
-  const getStatusColor = (status) => {
-    if (status.includes('✅')) return 'text-green-400';
-    if (status.includes('❌')) return 'text-red-400';
-    if (status.includes('⚠️')) return 'text-yellow-400';
-    return 'text-gray-400';
-  };
-
   const getStatusBg = (status) => {
-    if (status.includes('✅')) return 'bg-green-500/10 border-green-500/30';
-    if (status.includes('❌')) return 'bg-red-500/10 border-red-500/30';
-    if (status.includes('⚠️')) return 'bg-yellow-500/10 border-yellow-500/30';
+    if (status.includes('yes')) return 'bg-green-500/10 border-green-500/30';
+    if (status.includes('no')) return 'bg-red-500/10 border-red-500/30';
+    if (status.includes('warning')) return 'bg-yellow-500/10 border-yellow-500/30';
     return 'bg-gray-500/10 border-gray-500/30';
   };
+
+  const renderStatus = (status) => {
+    console.log('renderStatus called with:', status);
+    let icon, text, colorClass;
+    
+    if (status.includes('yes')) {
+      icon = <span className="text-green-400">✓</span>;
+      text = status.replace('yes', '').trim();
+      colorClass = 'text-green-400';
+    } else if (status.includes('no')) {
+      icon = <span className="text-red-400">✗</span>;
+      text = status.replace('no', '').trim();
+      colorClass = 'text-red-400';
+    } else if (status.includes('warning')) {
+      icon = <span className="text-yellow-400">⚠</span>;
+      text = status.replace('warning', '').trim();
+      colorClass = 'text-yellow-400';
+    } else {
+      icon = <span className="text-gray-400">?</span>;
+      text = status;
+      colorClass = 'text-gray-400';
+    }
+    
+    const result = (
+      <div className={`flex items-center justify-center gap-2 ${colorClass}`} key={Date.now()}>
+        {icon}
+        <span>{text} [НОВЫЙ]</span>
+      </div>
+    );
+    console.log('renderStatus returning:', result);
+    return result;
+  };
+
+
 
   return (
     <section className="py-20 bg-dark-bg">
@@ -124,13 +153,11 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.aiGeneration)
                     } ${
-                      hoveredRow === index && !competitor.isRaritygram && competitor.aiGeneration.includes('✅')
+                      hoveredRow === index && !competitor.isRaritygram && competitor.aiGeneration.includes('yes')
                         ? 'scale-105 shadow-lg'
                         : ''
                     }`}>
-                      <span className={getStatusColor(competitor.aiGeneration)}>
-                        {competitor.aiGeneration}
-                      </span>
+                      <TestStatus status={competitor.aiGeneration} />
                     </div>
                   </div>
 
@@ -139,13 +166,11 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.ipManagement)
                     } ${
-                      hoveredRow === index && !competitor.isRaritygram && competitor.ipManagement.includes('✅')
+                      hoveredRow === index && !competitor.isRaritygram && competitor.ipManagement.includes('yes')
                         ? 'scale-105 shadow-lg'
                         : ''
                     }`}>
-                      <span className={getStatusColor(competitor.ipManagement)}>
-                        {competitor.ipManagement}
-                      </span>
+                      <TestStatus status={competitor.ipManagement} />
                     </div>
                   </div>
 
@@ -154,13 +179,11 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.monetization)
                     } ${
-                      hoveredRow === index && !competitor.isRaritygram && competitor.monetization.includes('✅')
+                      hoveredRow === index && !competitor.isRaritygram && competitor.monetization.includes('yes')
                         ? 'scale-105 shadow-lg'
                         : ''
                     }`}>
-                      <span className={getStatusColor(competitor.monetization)}>
-                        {competitor.monetization}
-                      </span>
+                      <TestStatus status={competitor.monetization} />
                     </div>
                   </div>
                 </div>
@@ -201,9 +224,7 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium ${
                       getStatusBg(competitor.aiGeneration)
                     }`}>
-                      <span className={getStatusColor(competitor.aiGeneration)}>
-                        {competitor.aiGeneration}
-                      </span>
+                      <TestStatus status={competitor.aiGeneration} />
                     </div>
                   </div>
 
@@ -213,9 +234,7 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium ${
                       getStatusBg(competitor.ipManagement)
                     }`}>
-                      <span className={getStatusColor(competitor.ipManagement)}>
-                        {competitor.ipManagement}
-                      </span>
+                      <TestStatus status={competitor.ipManagement} />
                     </div>
                   </div>
 
@@ -225,9 +244,7 @@ const CompetitionSection = () => {
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium ${
                       getStatusBg(competitor.monetization)
                     }`}>
-                      <span className={getStatusColor(competitor.monetization)}>
-                        {competitor.monetization}
-                      </span>
+                      <TestStatus status={competitor.monetization} />
                     </div>
                   </div>
                 </div>

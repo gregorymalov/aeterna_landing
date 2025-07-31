@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Shield, DollarSign, Brain } from 'lucide-react';
+
 
 const SolutionSection = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -11,7 +13,7 @@ const SolutionSection = () => {
       title: "Creation",
       subtitle: "Create your Digital Twin",
       description: "Use advanced AI technologies to create a photorealistic avatar that looks, speaks, and interacts like you.",
-      icon: "🧠",
+      icon: Brain,
       color: "from-blue-500 to-purple-600"
     },
     {
@@ -19,7 +21,7 @@ const SolutionSection = () => {
       title: "Protection",
       subtitle: "Certify ownership with a Master-NFT",
       description: "Undergo identity verification (KYC) and secure your rights to your likeness as a unique Master-NFT on the blockchain. This is your digital certificate of ownership.",
-      icon: "🛡️",
+      icon: Shield,
       color: "from-purple-500 to-pink-600"
     },
     {
@@ -27,7 +29,7 @@ const SolutionSection = () => {
       title: "Monetization",
       subtitle: "Unlock new revenue streams",
       description: "License content created by your AI twin on our marketplace, accept donations, and offer exclusive subscriptions. All in one place.",
-      icon: "💰",
+      icon: DollarSign,
       color: "from-yellow-500 to-orange-600"
     }
   ];
@@ -101,7 +103,7 @@ const SolutionSection = () => {
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center text-3xl mb-6 mx-auto transform transition-transform duration-300 ${
                     activeStep === index ? 'scale-110' : 'scale-100'
                   }`}>
-                    {step.icon}
+                    <step.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Step number */}

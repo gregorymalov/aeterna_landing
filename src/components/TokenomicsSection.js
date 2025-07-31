@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Lock, Eye, DollarSign, TrendingUp } from 'lucide-react';
 
 const TokenomicsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,25 +11,25 @@ const TokenomicsSection = () => {
       title: "Staking",
       description: "Authors stake $IDENTITY to increase content visibility",
       color: "#8B5CF6",
-      icon: "🔒"
+      icon: Lock
     },
     {
       title: "Visibility",
       description: "More stake = more reach and audience engagement",
       color: "#06B6D4",
-      icon: "👁️"
+      icon: Eye
     },
     {
       title: "Revenue",
       description: "Increased reach leads to growth in author's income",
       color: "#10B981",
-      icon: "💰"
+      icon: DollarSign
     },
     {
       title: "Token Demand",
       description: "Successful authors buy more tokens for staking",
       color: "#F59E0B",
-      icon: "📈"
+      icon: TrendingUp
     }
   ];
 
@@ -149,7 +150,9 @@ const TokenomicsSection = () => {
                           boxShadow: activeSegment === index ? `0 0 20px ${segment.color}40` : 'none'
                         }}
                       >
-                        <span className="text-2xl">{segment.icon}</span>
+                        <div className="mb-2">
+                          <segment.icon className="w-6 h-6 text-white" />
+                        </div>
                       </div>
                     );
                   })}
@@ -206,7 +209,7 @@ const TokenomicsSection = () => {
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4"
                        style={{ backgroundColor: segments[activeSegment].color + '20' }}>
-                    <span className="text-2xl">{segments[activeSegment].icon}</span>
+                    {React.createElement(segments[activeSegment].icon, { className: "w-6 h-6 text-white" })}
                   </div>
                   <h4 className="text-xl font-bold text-white">
                     {segments[activeSegment].title}
