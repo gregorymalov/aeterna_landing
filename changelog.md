@@ -1,15 +1,31 @@
 # Changelog - Raritygram
 
-## [2025-07-28] - Переименование проекта
+All notable changes to this project will be documented in this file.
 
-- Проект был переименован с "Aeterna" на "Raritygram".
-- Все упоминания старого названия в кодовой базе и файлах конфигурации были обновлены.
+## [1.1.0] - 2025-07-31
 
+### Changed
+- **Full English Translation:** Completed the full translation of the landing page from Russian to English.
+- Translated all UI text, comments, and static data in the following components:
+  - `CTASection.js`
+  - `CompetitionSection.js`
+  - `CompetitiveAdvantage.js`
+  - `TokenomicsSection.js`
+- Updated `LanguageContext.js` to set the default language to 'en'.
+- Verified that no Russian (Cyrillic) text remains in the project's source code.
+
+## [1.0.1] - 2025-07-28
+
+### Changed
+- **Project Renaming:** The project was renamed from "Aeterna" to "Raritygram".
+- All mentions of the old name in the codebase and configuration files were updated.
 
 ## [1.0.0] - 2024-01-25
 
-### Добавлено
-- ✅ Создана базовая структура React приложения с Create React App
+### Added
+- Created the basic structure of the React application with Create React App
+- Configured Tailwind CSS via CDN with a custom color scheme (purple, yellow, dark)
+- Connected the Inter font for a modern typographic style
 - ✅ Настроен Tailwind CSS через CDN с кастомной цветовой схемой (фиолетовый, желтый, темный)
 - ✅ Подключен шрифт Inter для современного типографического стиля
 

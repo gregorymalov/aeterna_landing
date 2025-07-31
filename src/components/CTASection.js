@@ -18,9 +18,9 @@ const CTASection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Здесь будет логика отправки формы
+    // Form submission logic will be here
     console.log('Form submitted:', formData);
-    alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+    alert('Thank you! We will contact you shortly.');
   };
 
   return (
@@ -28,16 +28,16 @@ const CTASection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Станьте частью</span>{' '}
-            <span className="text-purple-primary">будущего</span>
+            <span className="text-white">Become a part of the</span>{' '}
+            <span className="text-purple-primary">future</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Присоединяйтесь к революции цифровой идентичности уже сегодня
+            Join the digital identity revolution today
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Переключатель аудитории */}
+          {/* Audience switcher */}
           <div className="flex justify-center mb-12">
             <div className="bg-dark-card rounded-xl p-2 border border-gray-700">
               <button
@@ -48,7 +48,7 @@ const CTASection = () => {
                     : 'text-gray-400 hover:text-white'
                 }`}
               >
-                Для авторов
+                For Creators
               </button>
               <button
                 onClick={() => setActiveForm('investor')}
@@ -58,13 +58,13 @@ const CTASection = () => {
                     : 'text-gray-400 hover:text-white'
                 }`}
               >
-                Для инвесторов
+                For Investors
               </button>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Левая колонка - информация */}
+            {/* Left column - information */}
             <div>
               {activeForm === 'creator' ? (
                 <div className="bg-dark-card rounded-2xl p-8 border border-purple-primary/30">
@@ -75,11 +75,11 @@ const CTASection = () => {
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4">
-                    Получите ранний доступ
+                    Get Early Access
                   </h3>
                   
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    Станьте одним из первых авторов на платформе Raritygram. Получите:
+                    Become one of the first creators on the Raritygram platform. Get:
                   </p>
 
                   <div className="space-y-3 mb-6">
@@ -87,31 +87,31 @@ const CTASection = () => {
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Бесплатное создание AI-аватара
+                      Free AI-avatar creation
                     </div>
                     <div className="flex items-center text-purple-primary">
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Приоритетная поддержка
+                      Priority support
                     </div>
                     <div className="flex items-center text-purple-primary">
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Эксклюзивные функции
+                      Exclusive features
                     </div>
                     <div className="flex items-center text-purple-primary">
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Бонусные $IDENTITY токены
+                      Bonus $IDENTITY tokens
                     </div>
                   </div>
 
                   <div className="bg-purple-primary/10 border border-purple-primary/30 rounded-lg p-4">
                     <p className="text-purple-primary text-sm">
-                      <strong>Ограниченное предложение:</strong> Первые 100 авторов получат пожизненную скидку 50% на все услуги платформы.
+                      <strong>Limited offer:</strong> The first 100 creators will receive a lifetime 50% discount on all platform services.
                     </p>
                   </div>
                 </div>
@@ -124,11 +124,11 @@ const CTASection = () => {
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4">
-                    Инвестиционная возможность
+                    Investment Opportunity
                   </h3>
                   
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    Узнайте больше о создании новой рыночной инфраструктуры объемом $1.5+ триллиона:
+                    Learn more about creating a new market infrastructure of $1.5+ trillion:
                   </p>
 
                   <div className="space-y-3 mb-6">
@@ -136,45 +136,45 @@ const CTASection = () => {
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Детальная презентация для инвесторов
+                      Detailed presentation for investors
                     </div>
                     <div className="flex items-center text-yellow-accent">
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Финансовые прогнозы и модели
+                      Financial forecasts and models
                     </div>
                     <div className="flex items-center text-yellow-accent">
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Техническая документация
+                      Technical documentation
                     </div>
                     <div className="flex items-center text-yellow-accent">
                       <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      Встреча с командой
+                      Meeting with the team
                     </div>
                   </div>
 
                   <div className="bg-yellow-accent/10 border border-yellow-accent/30 rounded-lg p-4">
                     <p className="text-yellow-accent text-sm">
-                      <strong>Эксклюзивно:</strong> Доступ к закрытому инвестиционному раунду Pre-Seed с особыми условиями для ранних инвесторов.
+                      <strong>Exclusive:</strong> Access to a closed Pre-Seed investment round with special conditions for early investors.
                     </p>
                   </div>
                 </div>
               )}
             </div>
 
-            {/* Правая колонка - форма */}
+            {/* Right column - form */}
             <div className="bg-dark-card rounded-2xl p-8 border border-gray-700">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {activeForm === 'creator' ? (
                   <>
                     <div>
                       <label className="block text-white font-semibold mb-2">
-                        Email адрес *
+                        Email address *
                       </label>
                       <input
                         type="email"
@@ -189,7 +189,7 @@ const CTASection = () => {
                     
                     <div>
                       <label className="block text-white font-semibold mb-2">
-                        Имя
+                        Name
                       </label>
                       <input
                         type="text"
@@ -197,13 +197,13 @@ const CTASection = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:border-purple-primary focus:outline-none transition-colors"
-                        placeholder="Ваше имя"
+                        placeholder="Your name"
                       />
                     </div>
 
                     <div>
                       <label className="block text-white font-semibold mb-2">
-                        Тип контента
+                        Content type
                       </label>
                       <select
                         name="role"
@@ -211,12 +211,12 @@ const CTASection = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:border-purple-primary focus:outline-none transition-colors"
                       >
-                        <option value="">Выберите тип</option>
-                        <option value="influencer">Инфлюенсер</option>
-                        <option value="artist">Художник</option>
-                        <option value="musician">Музыкант</option>
-                        <option value="streamer">Стример</option>
-                        <option value="other">Другое</option>
+                        <option value="">Select type</option>
+                        <option value="influencer">Influencer</option>
+                        <option value="artist">Artist</option>
+                        <option value="musician">Musician</option>
+                        <option value="streamer">Streamer</option>
+                        <option value="other">Other</option>
                       </select>
                     </div>
 
@@ -224,14 +224,14 @@ const CTASection = () => {
                       type="submit"
                       className="w-full bg-purple-primary hover:bg-purple-dark py-4 rounded-lg text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      Присоединиться к списку ожидания
+                      Join the waiting list
                     </button>
                   </>
                 ) : (
                   <>
                     <div>
                       <label className="block text-white font-semibold mb-2">
-                        Имя *
+                        Name *
                       </label>
                       <input
                         type="text"
@@ -240,13 +240,13 @@ const CTASection = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:border-yellow-accent focus:outline-none transition-colors"
-                        placeholder="Ваше имя"
+                        placeholder="Your name"
                       />
                     </div>
 
                     <div>
                       <label className="block text-white font-semibold mb-2">
-                        Фонд/Компания *
+                        Fund/Company *
                       </label>
                       <input
                         type="text"
@@ -255,13 +255,13 @@ const CTASection = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-dark-bg border border-gray-600 rounded-lg text-white focus:border-yellow-accent focus:outline-none transition-colors"
-                        placeholder="Название фонда или компании"
+                        placeholder="Fund or company name"
                       />
                     </div>
                     
                     <div>
                       <label className="block text-white font-semibold mb-2">
-                        Email адрес *
+                        Email address *
                       </label>
                       <input
                         type="email"
@@ -278,26 +278,26 @@ const CTASection = () => {
                       type="submit"
                       className="w-full bg-yellow-accent hover:bg-yellow-500 text-dark-bg py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
                     >
-                      Запросить презентацию для инвесторов
+                      Request investor presentation
                     </button>
                   </>
                 )}
               </form>
 
               <p className="text-gray-400 text-sm mt-4 text-center">
-                Мы уважаем вашу конфиденциальность. Никакого спама, только важные обновления.
+                We respect your privacy. No spam, only important updates.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Футер */}
+        {/* Footer */}
         <div className="mt-20 pt-8 border-t border-gray-700 text-center">
           <div className="text-2xl font-bold text-white mb-4">
             <span className="text-purple-primary">Raritygram</span>
           </div>
           <p className="text-gray-400">
-            © 2024 Raritygram. Суверенная цифровая идентичность для эпохи ИИ.
+            &copy; 2024 Raritygram. Sovereign digital identity for the AI era.
           </p>
         </div>
       </div>

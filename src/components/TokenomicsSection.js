@@ -7,26 +7,26 @@ const TokenomicsSection = () => {
 
   const segments = [
     {
-      title: "Стейкинг",
-      description: "Авторы стейкают $IDENTITY для повышения видимости контента",
+      title: "Staking",
+      description: "Authors stake $IDENTITY to increase content visibility",
       color: "#8B5CF6",
       icon: "🔒"
     },
     {
-      title: "Видимость",
-      description: "Больше стейка = больше охват и вовлеченность аудитории",
+      title: "Visibility",
+      description: "More stake = more reach and audience engagement",
       color: "#06B6D4",
       icon: "👁️"
     },
     {
-      title: "Доход",
-      description: "Увеличенный охват приводит к росту доходов автора",
+      title: "Revenue",
+      description: "Increased reach leads to growth in author's income",
       color: "#10B981",
       icon: "💰"
     },
     {
-      title: "Спрос на токен",
-      description: "Успешные авторы покупают больше токенов для стейкинга",
+      title: "Token Demand",
+      description: "Successful authors buy more tokens for staking",
       color: "#F59E0B",
       icon: "📈"
     }
@@ -64,23 +64,23 @@ const TokenomicsSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Экономический двигатель</span>{' '}
+            <span className="text-white">Economic Engine</span>{' '}
             <span className="text-yellow-accent">$IDENTITY</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Самоусиливающийся маховик, превращающий пользователей в стейкхолдеров
+            A self-reinforcing flywheel that turns users into stakeholders
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Анимированный маховик */}
+            {/* Animated flywheel */}
             <div className="relative">
               <div className="flex items-center justify-center">
                 <div className="relative w-80 h-80">
-                  {/* Основной круг */}
+                  {/* Main circle */}
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                    {/* Фоновый круг */}
+                    {/* Background circle */}
                     <circle
                       cx="50"
                       cy="50"
@@ -90,7 +90,7 @@ const TokenomicsSection = () => {
                       strokeWidth="2"
                     />
                     
-                    {/* Сегменты маховика */}
+                    {/* Flywheel segments */}
                     {segments.map((segment, index) => {
                       const circumference = 2 * Math.PI * 45;
                       const segmentLength = circumference / segments.length;
@@ -118,14 +118,14 @@ const TokenomicsSection = () => {
                     })}
                   </svg>
 
-                  {/* Центральный логотип */}
+                  {/* Central logo */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 bg-gradient-to-br from-purple-primary to-yellow-accent rounded-full flex items-center justify-center">
                       <span className="text-2xl font-bold text-white">$ID</span>
                     </div>
                   </div>
 
-                  {/* Сегменты с иконками */}
+                  {/* Segments with icons */}
                   {segments.map((segment, index) => {
                     const angle = (360 / segments.length) * index - 90;
                     const radian = (angle * Math.PI) / 180;
@@ -154,7 +154,7 @@ const TokenomicsSection = () => {
                     );
                   })}
 
-                  {/* Стрелки между сегментами */}
+                  {/* Arrows between segments */}
                   {segments.map((_, index) => {
                     const angle = (360 / segments.length) * index - 90 + (360 / segments.length) / 2;
                     const radian = (angle * Math.PI) / 180;
@@ -183,24 +183,24 @@ const TokenomicsSection = () => {
               </div>
             </div>
 
-            {/* Описание текущего сегмента */}
+            {/* Description of the current segment */}
             <div className="space-y-8">
               <div className="bg-dark-card rounded-2xl p-8 border border-purple-primary/30">
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  Как работает маховик $IDENTITY
+                  How the $IDENTITY flywheel works
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Наш нативный токен $IDENTITY — это не просто валюта, а двигатель экосистемы. 
-                  Ключевая функция — <span className="text-yellow-accent font-semibold">'Стейкинг для видимости'</span>.
+                  Our native token $IDENTITY is not just a currency, but the engine of the ecosystem. 
+                  The key function is <span className="text-yellow-accent font-semibold">'Staking for Visibility'</span>.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Авторы могут стейкать токены для повышения охвата своего контента, что создает прямую связь 
-                  между экономическим участием и коммерческим успехом. Это мощный механизм удержания, 
-                  превращающий пользователей в стейкхолдеров.
+                  Authors can stake tokens to increase the reach of their content, which creates a direct link 
+                  between economic participation and commercial success. This is a powerful retention mechanism, 
+                  that turns users into stakeholders.
                 </p>
               </div>
 
-              {/* Активный сегмент */}
+              {/* Active segment */}
               <div className="bg-dark-card rounded-2xl p-6 border-2 transition-all duration-500"
                    style={{ borderColor: segments[activeSegment].color + '60' }}>
                 <div className="flex items-center mb-4">
@@ -217,7 +217,7 @@ const TokenomicsSection = () => {
                 </p>
               </div>
 
-              {/* Индикаторы */}
+              {/* Indicators */}
               <div className="flex justify-center space-x-3">
                 {segments.map((_, index) => (
                   <button

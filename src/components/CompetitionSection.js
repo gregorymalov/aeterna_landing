@@ -7,8 +7,8 @@ const CompetitionSection = () => {
     {
       name: 'Raritygram',
       aiGeneration: '✅',
-      ipManagement: '✅ (Мастер-NFT)',
-      monetization: '✅ (Маркетплейс)',
+      ipManagement: '✅ (Master-NFT)',
+      monetization: '✅ (Marketplace)',
       isRaritygram: true
     },
     {
@@ -21,13 +21,13 @@ const CompetitionSection = () => {
     {
       name: 'CelebMakerAI, Genies',
       aiGeneration: '✅',
-      ipManagement: '⚠️ (Централизованно)',
-      monetization: '⚠️ (Ограниченно)',
+      ipManagement: '⚠️ (Centralized)',
+      monetization: '⚠️ (Limited)',
       isRaritygram: false
     },
     {
       name: 'Fanvue, Patreon',
-      aiGeneration: '⚠️ (Интеграция)',
+      aiGeneration: '⚠️ (Integration)',
       ipManagement: '❌',
       monetization: '✅',
       isRaritygram: false
@@ -35,7 +35,7 @@ const CompetitionSection = () => {
     {
       name: 'Lens Protocol, Farcaster',
       aiGeneration: '❌',
-      ipManagement: '✅ (Протокол)',
+      ipManagement: '✅ (Protocol)',
       monetization: '❌',
       isRaritygram: false
     }
@@ -60,37 +60,37 @@ const CompetitionSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Конкуренты решают</span>{' '}
-            <span className="text-red-400">часть проблемы</span>
+            <span className="text-white">Competitors solve</span>{' '}
+            <span className="text-red-400">part of the problem</span>
           </h2>
           <p className="text-2xl font-semibold text-purple-primary mb-4">
-            Мы перестраиваем всю систему
+            We are rebuilding the entire system
           </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Интегрированный подход против фрагментированного рынка
+            An integrated approach versus a fragmented market
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Десктопная версия таблицы */}
+          {/* Desktop table version */}
           <div className="hidden lg:block">
-            {/* Заголовки таблицы */}
+            {/* Table headers */}
             <div className="grid grid-cols-4 gap-4 mb-6">
               <div className="text-center">
-                <h3 className="text-lg font-semibold text-white">Платформа</h3>
+                <h3 className="text-lg font-semibold text-white">Platform</h3>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-semibold text-purple-primary">Генерация AI</h3>
+                <h3 className="text-lg font-semibold text-purple-primary">AI Generation</h3>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-semibold text-yellow-accent">Управление ИС</h3>
+                <h3 className="text-lg font-semibold text-yellow-accent">IP Management</h3>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-semibold text-green-400">Монетизация</h3>
+                <h3 className="text-lg font-semibold text-green-400">Monetization</h3>
               </div>
             </div>
 
-            {/* Строки таблицы */}
+            {/* Table rows */}
             <div className="space-y-3">
               {competitors.map((competitor, index) => (
                 <div
@@ -105,7 +105,7 @@ const CompetitionSection = () => {
                   onMouseEnter={() => setHoveredRow(index)}
                   onMouseLeave={() => setHoveredRow(null)}
                 >
-                  {/* Название платформы */}
+                  {/* Platform name */}
                   <div className="flex items-center">
                     <div className={`font-semibold ${
                       competitor.isRaritygram ? 'text-white text-lg' : 'text-gray-300'
@@ -113,13 +113,13 @@ const CompetitionSection = () => {
                       {competitor.name}
                       {competitor.isRaritygram && (
                         <div className="text-sm text-purple-primary font-normal mt-1">
-                          (Наше решение)
+                          (Our solution)
                         </div>
                       )}
                     </div>
                   </div>
 
-                  {/* Генерация AI */}
+                  {/* AI Generation */}
                   <div className="flex justify-center">
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.aiGeneration)
@@ -134,7 +134,7 @@ const CompetitionSection = () => {
                     </div>
                   </div>
 
-                  {/* Управление ИС */}
+                  {/* IP Management */}
                   <div className="flex justify-center">
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.ipManagement)
@@ -149,7 +149,7 @@ const CompetitionSection = () => {
                     </div>
                   </div>
 
-                  {/* Монетизация */}
+                  {/* Monetization */}
                   <div className="flex justify-center">
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium transition-all duration-300 ${
                       getStatusBg(competitor.monetization)
@@ -168,7 +168,7 @@ const CompetitionSection = () => {
             </div>
           </div>
 
-          {/* Мобильная версия - карточки */}
+          {/* Mobile version - cards */}
           <div className="lg:hidden space-y-6">
             {competitors.map((competitor, index) => (
               <div
@@ -179,7 +179,7 @@ const CompetitionSection = () => {
                     : 'bg-dark-card/50 border-gray-700'
                 }`}
               >
-                {/* Название платформы */}
+                {/* Platform name */}
                 <div className="mb-4 text-center">
                   <h3 className={`text-xl font-bold ${
                     competitor.isRaritygram ? 'text-white' : 'text-gray-300'
@@ -188,16 +188,16 @@ const CompetitionSection = () => {
                   </h3>
                   {competitor.isRaritygram && (
                     <div className="text-sm text-purple-primary font-medium mt-1">
-                      (Наше решение)
+                      (Our solution)
                     </div>
                   )}
                 </div>
 
-                {/* Характеристики */}
+                {/* Features */}
                 <div className="space-y-4">
-                  {/* Генерация AI */}
+                  {/* AI Generation */}
                   <div className="flex justify-between items-center">
-                    <span className="text-purple-primary font-semibold">Генерация AI:</span>
+                    <span className="text-purple-primary font-semibold">AI Generation:</span>
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium ${
                       getStatusBg(competitor.aiGeneration)
                     }`}>
@@ -207,9 +207,9 @@ const CompetitionSection = () => {
                     </div>
                   </div>
 
-                  {/* Управление ИС */}
+                  {/* IP Management */}
                   <div className="flex justify-between items-center">
-                    <span className="text-yellow-accent font-semibold">Управление ИС:</span>
+                    <span className="text-yellow-accent font-semibold">IP Management:</span>
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium ${
                       getStatusBg(competitor.ipManagement)
                     }`}>
@@ -219,9 +219,9 @@ const CompetitionSection = () => {
                     </div>
                   </div>
 
-                  {/* Монетизация */}
+                  {/* Monetization */}
                   <div className="flex justify-between items-center">
-                    <span className="text-green-400 font-semibold">Монетизация:</span>
+                    <span className="text-green-400 font-semibold">Monetization:</span>
                     <div className={`px-3 py-2 rounded-lg border text-center font-medium ${
                       getStatusBg(competitor.monetization)
                     }`}>
@@ -236,15 +236,15 @@ const CompetitionSection = () => {
           </div>
         </div>
 
-        {/* Вывод */}
+        {/* Conclusion */}
         <div className="mt-12 text-center">
           <div className="bg-dark-card rounded-2xl p-8 border border-purple-primary/30">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Только Raritygram предлагает полное решение
+              Only Raritygram offers a complete solution
             </h3>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Пока конкуренты решают отдельные задачи, мы создаем интегрированную экосистему 
-              для полного жизненного цикла цифровой идентичности — от создания до монетизации.
+              While competitors solve individual problems, we are creating an integrated ecosystem 
+              for the full lifecycle of digital identity - from creation to monetization.
             </p>
           </div>
         </div>

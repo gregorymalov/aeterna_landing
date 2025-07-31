@@ -8,25 +8,25 @@ const SolutionSection = () => {
   const steps = [
     {
       id: 1,
-      title: "Создание",
-      subtitle: "Создайте своего Цифрового Двойника",
-      description: "Используйте передовые AI-технологии для создания фотореалистичного аватара, который выглядит, говорит и взаимодействует как вы.",
+      title: "Creation",
+      subtitle: "Create your Digital Twin",
+      description: "Use advanced AI technologies to create a photorealistic avatar that looks, speaks, and interacts like you.",
       icon: "🧠",
       color: "from-blue-500 to-purple-600"
     },
     {
       id: 2,
-      title: "Защита",
-      subtitle: "Заверьте право собственности с Мастер-NFT",
-      description: "Пройдите верификацию личности (KYC) и закрепите свое право на образ в виде уникального Мастер-NFT в блокчейне. Это ваше цифровое свидетельство о собственности.",
+      title: "Protection",
+      subtitle: "Certify ownership with a Master-NFT",
+      description: "Undergo identity verification (KYC) and secure your rights to your likeness as a unique Master-NFT on the blockchain. This is your digital certificate of ownership.",
       icon: "🛡️",
       color: "from-purple-500 to-pink-600"
     },
     {
       id: 3,
-      title: "Монетизация",
-      subtitle: "Откройте новые источники дохода",
-      description: "Лицензируйте контент, созданный вашим AI-двойником, на нашем маркетплейсе, принимайте донаты и предлагайте эксклюзивные подписки. Все в одном месте.",
+      title: "Monetization",
+      subtitle: "Unlock new revenue streams",
+      description: "License content created by your AI twin on our marketplace, accept donations, and offer exclusive subscriptions. All in one place.",
       icon: "💰",
       color: "from-yellow-500 to-orange-600"
     }
@@ -64,20 +64,20 @@ const SolutionSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-white">Интегрированная Платформа</span>{' '}
+            <span className="text-white">Integrated Platform</span>{' '}
             <span className="text-purple-primary">Raritygram</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ваша цифровая операционная система для создания, защиты и монетизации вашей личности в эпоху ИИ
+            Your digital operating system for creating, protecting, and monetizing your identity in the AI era
           </p>
         </div>
 
-        {/* Анимированная горизонтальная схема */}
+        {/* Animated horizontal diagram */}
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8">
             {steps.map((step, index) => (
               <div key={step.id} className="flex-1 relative">
-                {/* Соединительная линия */}
+                {/* Connecting line */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-primary to-transparent transform -translate-y-1/2 z-10">
                     <div 
@@ -88,7 +88,7 @@ const SolutionSection = () => {
                   </div>
                 )}
 
-                {/* Карточка шага */}
+                {/* Step card */}
                 <div 
                   className={`bg-dark-card rounded-2xl p-8 border-2 transition-all duration-500 cursor-pointer transform hover:scale-105 ${
                     activeStep === index 
@@ -97,31 +97,31 @@ const SolutionSection = () => {
                   }`}
                   onClick={() => setActiveStep(index)}
                 >
-                  {/* Иконка */}
+                  {/* Icon */}
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center text-3xl mb-6 mx-auto transform transition-transform duration-300 ${
                     activeStep === index ? 'scale-110' : 'scale-100'
                   }`}>
                     {step.icon}
                   </div>
 
-                  {/* Номер шага */}
+                  {/* Step number */}
                   <div className="text-center mb-4">
                     <span className="inline-block w-8 h-8 bg-purple-primary rounded-full text-white font-bold flex items-center justify-center text-sm">
                       {step.id}
                     </span>
                   </div>
 
-                  {/* Заголовок */}
+                  {/* Title */}
                   <h3 className="text-2xl font-bold text-white mb-2 text-center">
                     {step.title}
                   </h3>
 
-                  {/* Подзаголовок */}
+                  {/* Subtitle */}
                   <h4 className="text-lg font-semibold text-purple-primary mb-4 text-center">
                     {step.subtitle}
                   </h4>
 
-                  {/* Описание */}
+                  {/* Description */}
                   <p className="text-gray-300 text-center leading-relaxed">
                     {step.description}
                   </p>
@@ -130,7 +130,7 @@ const SolutionSection = () => {
             ))}
           </div>
 
-          {/* Индикаторы прогресса */}
+          {/* Progress indicators */}
           <div className="flex justify-center mt-12 space-x-3">
             {steps.map((_, index) => (
               <button

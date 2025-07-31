@@ -17,7 +17,7 @@ const Navigation = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false); // Закрываем мобильное меню
+      setIsMobileMenuOpen(false); // Close mobile menu
     }
   };
 
@@ -36,35 +36,35 @@ const Navigation = () => {
               onClick={() => scrollToSection('problem')}
               className="text-gray-300 hover:text-white transition-colors"
             >
-              Проблема
+              Problem
             </button>
             <button 
               onClick={() => scrollToSection('solution')}
               className="text-gray-300 hover:text-white transition-colors"
             >
-              Решение
+              Solution
             </button>
             <button 
               onClick={() => scrollToSection('investors')}
               className="text-gray-300 hover:text-white transition-colors"
             >
-              Рынок
+              Market
             </button>
             <button 
               onClick={() => scrollToSection('roadmap')}
               className="text-gray-300 hover:text-white transition-colors"
             >
-              Дорожная карта
+              Roadmap
             </button>
             <button 
               onClick={() => scrollToSection('investors')}
               className="bg-purple-primary hover:bg-purple-dark px-6 py-2 rounded-lg transition-colors font-medium"
             >
-              Для инвесторов
+              For Investors
             </button>
           </div>
           
-          {/* Гамбургер кнопка для мобильных */}
+          {/* Hamburger button for mobile */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
@@ -81,7 +81,7 @@ const Navigation = () => {
           </button>
         </div>
         
-        {/* Мобильное меню */}
+        {/* Mobile menu */}
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
@@ -90,31 +90,31 @@ const Navigation = () => {
               onClick={() => scrollToSection('problem')}
               className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
             >
-              Проблема
+              Problem
             </button>
             <button 
               onClick={() => scrollToSection('solution')}
               className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
             >
-              Решение
+              Solution
             </button>
             <button 
               onClick={() => scrollToSection('investors')}
               className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
             >
-              Рынок
+              Market
             </button>
             <button 
               onClick={() => scrollToSection('roadmap')}
               className="block w-full text-left text-gray-300 hover:text-white transition-colors py-2"
             >
-              Дорожная карта
+              Roadmap
             </button>
             <button 
               onClick={() => scrollToSection('investors')}
               className="block w-full bg-purple-primary hover:bg-purple-dark px-6 py-3 rounded-lg transition-colors font-medium text-center mt-4"
             >
-              Для инвесторов
+              For Investors
             </button>
           </div>
         </div>
